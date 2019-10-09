@@ -1,10 +1,5 @@
 function [theError] = ErrorRate(clust_lama, clust_baru, k)
 
-%clear all
-
-%k=9;
-% clust_lama=[1 1 1 1 1 1 2 3 1 1 3 3]';
-% clust_baru=[2 2 2 2 3 3 3 3 3 1 3 3]';
 
 n=size(clust_lama,1);
 temp=[clust_lama clust_baru];
