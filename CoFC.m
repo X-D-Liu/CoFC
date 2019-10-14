@@ -54,8 +54,8 @@ for itr = 1:50
                 
                 for jj = 1:P 
                     if jj ~= kk 
-                        temp1 = temp1 + beta(kk,jj)*u{jj}(k,i); 
-                        temp2 = temp2 + beta(kk,jj); 
+                        temp1 = temp1 + alpha(kk,jj)*u{jj}(k,i); 
+                        temp2 = temp2 + alpha(kk,jj); 
                     end 
                 end 
                 
@@ -69,7 +69,7 @@ for itr = 1:50
                     temp = 0; 
                     for jj = 1:P 
                         if jj ~= kk 
-                            temp = temp + beta(kk,jj)*u{jj}(l,i); 
+                            temp = temp + alpha(kk,jj)*u{jj}(l,i); 
                         end 
                     end 
                      
@@ -94,8 +94,8 @@ for itr = 1:50
                     temp2 = temp2 + u{kk}(k,i)^2; 
                     for jj = 1:P 
                         if jj ~= kk 
-                            temp3 = temp3 + beta(kk,jj)*(u{kk}(k,i) - u{jj}(k,i))^2*X{kk}(i,s); 
-                            temp4 = temp4 + beta(kk,jj)*(u{kk}(k,i) - u{jj}(k,i))^2; 
+                            temp3 = temp3 + alpha(kk,jj)*(u{kk}(k,i) - u{jj}(k,i))^2*X{kk}(i,s); 
+                            temp4 = temp4 + alpha(kk,jj)*(u{kk}(k,i) - u{jj}(k,i))^2; 
                         end 
                     end 
                 end 
